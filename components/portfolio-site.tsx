@@ -47,8 +47,8 @@ const navItems: { id: PageId; label: string }[] = [
 ];
 
 const heroVideo = {
-  desktop: { src: "/hero/hero-landscape.mp4", poster: "/hero/hero-landscape-poster.jpg" },
-  mobile: { src: "/hero/hero-portrait.mp4", poster: "/hero/hero-portrait-poster.jpg" },
+  desktop: { src: "/hero/hero.mp4", poster: "/hero/hero-poster.jpg" },
+  mobile: { src: "/hero/hero.mp4", poster: "/hero/hero-poster.jpg" },
 };
 
 type ShowcaseItem =
