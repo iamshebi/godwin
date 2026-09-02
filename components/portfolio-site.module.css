@@ -1127,3 +1127,32 @@
 .showcaseVideoLink {
   cursor: pointer;
 }
+
+/* ---------------------------------------------------------------
+   Cards size to their own media. Without this, a grid row is as tall
+   as its tallest card, so a 16:9 film sitting beside a 9:16 reel gets
+   letterboxed against the card background.
+   --------------------------------------------------------------- */
+.categoryGrid,
+.mobileWorkGrid {
+  align-items: start;
+}
+
+/* landscape films keep their whole frame; nothing is cropped and the
+   card is exactly the height of the video, so no bars are visible */
+.videoCardLandscape video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* on the homepage the masonry spans are deliberate, so video tiles
+   fill their tile rather than letterboxing inside it */
+.showcaseVideoCard {
+  height: 100%;
+}
+
+.showcaseVideoCard video {
+  aspect-ratio: auto;
+  height: 100%;
+  object-fit: cover;
+}
