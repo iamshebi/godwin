@@ -1156,3 +1156,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* section headings: mobile 2.45rem -> 1.8rem, desktop scaled by the same ratio */
+.sectionTitle {
+  font-size: clamp(2.3rem, 2.9vw, 3.1rem);
+  margin-bottom: 16px;
+}
+
+.mobileSectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 11px;
+}
