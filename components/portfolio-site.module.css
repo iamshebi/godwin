@@ -1,0 +1,1129 @@
+.pageShell {
+  min-height: 100vh;
+  background: #f1f1ee;
+  color: #121212;
+}
+
+.desktopOnly {
+  display: block;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.desktopHeader,
+.desktopContentArea {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+}
+
+.desktopHeader {
+  padding: 50px 18px 0;
+}
+
+.desktopHeaderTop {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+}
+
+.desktopHeaderSpacer {
+  min-height: 1px;
+}
+
+.desktopBrand,
+.mobileBrand,
+.mobileMenuBrand {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.desktopBrand {
+  justify-self: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(8.8rem, 5vw, 9.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.desktopSocials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 6px;
+}
+
+.desktopSocials a,
+.desktopNav button,
+.backButton,
+.categoryTopBar strong,
+.categoryTopBar span,
+.mobileNav button,
+.mobileInfo a,
+.mobileInfo p,
+.mobileInfo span,
+.mobileCategoryTopBar button,
+.mobileCategoryTopBar strong {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.desktopSocials a {
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 0 14px;
+}
+
+.desktopNav button,
+.backButton,
+.mobileNav button,
+.mobileCategoryTopBar button,
+.menuButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.desktopNav button {
+  cursor: pointer;
+}
+
+.activeNavItem {
+  text-decoration: underline;
+  text-underline-offset: 0.22rem;
+}
+
+.desktopContentArea {
+  padding: 0 18px 28px;
+}
+
+.homeView,
+.categoryView,
+.mobileCategoryView {
+  animation: viewFade 220ms ease;
+}
+
+.heroSection {
+  padding-top: 50px;
+}
+
+.heroFrame,
+.mobileHeroFrame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #d7d7d3;
+}
+
+.heroFrame {
+  aspect-ratio: 2.22 / 1;
+}
+
+.heroVideoFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77777778%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 56.25vw;
+  border: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sectionBlock {
+  padding-top: 100px;
+}
+
+.sectionTitle,
+.mobileSectionTitle {
+  margin: 0 0 20px;
+  color: #111;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(3.2rem, 4vw, 4.2rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 86px;
+  gap: 14px;
+}
+
+.workCard,
+.desktopCategoryCard,
+.mobileWorkCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #d8d8d4;
+}
+
+.workCard img,
+.desktopCategoryCard img,
+.mobileWorkCard img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.workCard img {
+  height: 100%;
+}
+
+.workCard span,
+.desktopCategoryCard span,
+.mobileWorkCard span {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.workCardPattern1 {
+  grid-row: span 4;
+}
+
+.workCardPattern2 {
+  grid-row: span 3;
+}
+
+.workCardPattern3 {
+  grid-row: span 5;
+}
+
+.workCardPattern4 {
+  grid-row: span 4;
+}
+
+.workCardPattern5 {
+  grid-row: span 4;
+}
+
+.workCardPattern6 {
+  grid-row: span 4;
+}
+
+.workCardPattern7 {
+  grid-row: span 5;
+}
+
+.workCardPattern8 {
+  grid-row: span 4;
+}
+
+.btsRail {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.btsRail::-webkit-scrollbar {
+  display: none;
+}
+
+.btsCard,
+.mobileBtsCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #191919;
+  opacity: 0.84;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.btsCard {
+  flex: 0 0 min(22vw, 310px);
+  aspect-ratio: 9 / 16;
+  scroll-snap-align: start;
+}
+
+.mobileBtsCard {
+  flex: 0 0 calc((100% - 12px) / 1.5);
+  aspect-ratio: 9 / 16;
+  scroll-snap-align: start;
+}
+
+.btsCardActive {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.btsIframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77777778%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 56.25vw;
+  border: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.videoUi {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.playButton {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+.desktopFooter {
+  padding: 100px 0 8px;
+}
+
+.desktopFooterRow {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.1fr) auto minmax(320px, 0.78fr);
+  align-items: start;
+  gap: 48px;
+  padding-bottom: 42px;
+}
+
+.desktopFooterLead {
+  display: grid;
+  gap: 18px;
+}
+
+.desktopFooterNewsletter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.28);
+  padding: 0 0 10px;
+}
+
+.desktopFooterCopy {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(17, 17, 17, 0.58);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.desktopFooterNewsletter span,
+.desktopFooterNewsletter button,
+.desktopFooterMeta span,
+.desktopFooterMeta a,
+.desktopFooterBottom p,
+.desktopFooterBottom a,
+.mobileFooterLead span,
+.mobileFooterLead button,
+.mobileFooterColumns span,
+.mobileFooterColumns a,
+.mobileFooterColumns p,
+.mobileFooterBottom p,
+.mobileFooterBottom a {
+  color: #111;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.desktopFooterNewsletter button,
+.mobileFooterLead button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.footerMark {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  color: #111;
+}
+
+.footerMark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.desktopFooterMeta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  padding-top: 2px;
+}
+
+.desktopFooterMeta div,
+.mobileFooterColumns div {
+  display: grid;
+  gap: 10px;
+}
+
+.desktopFooterMeta span {
+  margin-bottom: 8px;
+  color: #111;
+  font-size: 0.86rem;
+}
+
+.desktopFooterMeta a {
+  color: rgba(17, 17, 17, 0.58);
+  font-size: 0.84rem;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.footerLine {
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.desktopFooterBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 0;
+}
+
+.desktopFooterBottom p,
+.desktopFooterBottom a {
+  margin: 0;
+  color: rgba(17, 17, 17, 0.58);
+  font-size: 0.86rem;
+}
+
+.categoryView {
+  display: grid;
+  grid-template-columns: 126px minmax(0, 1fr);
+  gap: 20px;
+  min-height: calc(100vh - 160px);
+}
+
+.sidebar {
+  padding-top: 4px;
+  border-right: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebarMetaBlock {
+  display: grid;
+  gap: 4px;
+  margin-top: 36px;
+}
+
+.sidebarMetaBlock span {
+  color: rgba(17, 17, 17, 0.4);
+  font-size: 0.46rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebarMetaBlock strong {
+  color: #111;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.categoryContent {
+  padding-left: 6px;
+}
+
+.categoryTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0 16px;
+}
+
+.categoryTopBar span {
+  color: rgba(17, 17, 17, 0.66);
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+.desktopCategoryCard img {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.featureVideoWrap,
+.mobileFeatureVideoWrap {
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+}
+
+.featureVideo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.mobileHeader,
+.mobileMenuBackdrop,
+.mobileMenu {
+  display: none;
+}
+
+.mobileContentArea {
+  padding: 0 10px 18px;
+}
+
+.mobileHeroSection {
+  padding-top: 4px;
+}
+
+.mobileHeroFrame {
+  aspect-ratio: 1.36 / 1;
+  border-radius: 12px;
+}
+
+.mobileSectionTitle {
+  margin-bottom: 14px;
+  font-size: 2.45rem;
+}
+
+.mobileWorkGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mobileWorkCard img {
+  aspect-ratio: 0.88 / 1;
+}
+
+.mobileWorkCard span {
+  font-size: 0.86rem;
+}
+
+.mobileBtsRail {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobileBtsRail::-webkit-scrollbar {
+  display: none;
+}
+
+.mobileFooter {
+  padding: 18px 2px 0;
+}
+
+.mobileFooterLead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+  padding-bottom: 8px;
+}
+
+.mobileFooterCopy {
+  margin: 12px 0 18px;
+  color: rgba(17, 17, 17, 0.56);
+  font-size: 0.58rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.mobileFooterColumns {
+  display: grid;
+  gap: 18px;
+}
+
+.mobileFooterColumns p {
+  color: rgba(17, 17, 17, 0.68);
+  line-height: 1.6;
+  text-transform: none;
+}
+
+.mobileFooterBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+@media (max-width: 900px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly,
+  .mobileHeader,
+  .mobileMenuBackdrop,
+  .mobileMenu {
+    display: block;
+  }
+
+  .mobileHeader {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px 8px;
+    background: rgba(241, 241, 238, 0.96);
+    backdrop-filter: blur(10px);
+    transition: padding 180ms ease;
+  }
+
+  .mobileHeaderScrolled {
+    padding: 8px 12px 6px;
+  }
+
+  .mobileBrand {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 3.4rem;
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    transition: font-size 180ms ease;
+  }
+
+  .mobileBrandScrolled {
+    font-size: 3rem;
+  }
+
+  .menuButton {
+    position: relative;
+    width: 34px;
+    height: 34px;
+  }
+
+  .menuButton span {
+    position: absolute;
+    left: 4px;
+    width: 24px;
+    height: 1.5px;
+    background: rgba(17, 17, 17, 0.58);
+    transition: transform 220ms ease, opacity 220ms ease, top 220ms ease;
+  }
+
+  .menuButton span:first-child {
+    top: 11px;
+  }
+
+  .menuButton span:nth-child(2) {
+    top: 16px;
+  }
+
+  .menuButton span:last-child {
+    top: 21px;
+  }
+
+  .menuButtonOpen span:first-child {
+    top: 16px;
+    transform: rotate(45deg);
+  }
+
+  .menuButtonOpen span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuButtonOpen span:last-child {
+    top: 16px;
+    transform: rotate(-45deg);
+  }
+
+  .mobileMenuBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    background: rgba(80, 56, 59, 0.78);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+
+  .mobileMenuBackdropOpen {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    overflow: auto;
+    padding: 8px 12px 24px;
+    background: #f1f1ee;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 260ms ease, opacity 260ms ease;
+  }
+
+  .mobileMenuOpen {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileMenuHeader {
+    position: relative;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .mobileMenuBrand {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 3.4rem;
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+  }
+
+  .mobileClose {
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+
+  .mobileNav {
+    display: grid;
+    gap: 12px;
+    padding: 42px 0 32px;
+  }
+
+  .mobileNav button {
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .mobileInfo {
+    display: grid;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .mobileInfo span {
+    margin-top: 14px;
+    color: rgba(17, 17, 17, 0.42);
+  }
+
+  .mobileInfo p {
+    color: rgba(17, 17, 17, 0.72);
+    line-height: 1.5;
+    text-transform: none;
+  }
+
+  .mobileCategoryView {
+    padding: 8px 10px 18px;
+  }
+
+  .mobileCategoryTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .mobileFeatureVideo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+}
+
+@keyframes viewFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.categoryVideoCard,
+.mobileVideoCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+  cursor: pointer;
+}
+
+.categoryVideoCard video,
+.mobileVideoCard video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  object-fit: cover;
+  background: #000;
+}
+
+.categoryVideoCard span,
+.mobileVideoCard span {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.categoryNote {
+  margin: 0;
+  padding: 48px 0;
+  color: #6a6a66;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.placeholderCard {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 6px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+    135deg,
+    #d8d8d4,
+    #d8d8d4 14px,
+    #d3d3ce 14px,
+    #d3d3ce 28px
+  );
+}
+
+.placeholderCardAlt {
+  background: repeating-linear-gradient(
+    135deg,
+    #cfcfc9,
+    #cfcfc9 14px,
+    #cacac4 14px,
+    #cacac4 28px
+  );
+}
+
+.placeholderCard span {
+  color: #7d7d77;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.placeholderCard em {
+  color: #96968f;
+  font-size: 0.62rem;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.videoCardLandscape video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.workCardButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+}
+
+.desktopFooterNewsletter,
+.mobileFooterLead {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.heroVideoFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  border: 0;
+}
+
+.showcaseVideoCard {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.showcaseVideoCard video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #000;
+}
+
+/* --- masthead balance: smaller wordmark, larger category row --- */
+.desktopBrand {
+  font-size: clamp(4rem, 7vw, 7rem);
+}
+
+.desktopNav {
+  gap: 24px;
+  padding: 14px 0 18px;
+}
+
+.desktopNav button {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+}
+
+.mobileBrand {
+  font-size: 2.6rem;
+}
+
+.mobileBrandScrolled {
+  font-size: 2.2rem;
+}
+
+.mobileNav button {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+}
+
+/* showcase video titles sit top-left so the play button does not cover them */
+.showcaseVideoCard span {
+  top: 12px;
+  bottom: auto;
+}
+
+/* ---------------------------------------------------------------
+   Motion. Two easings do all the work:
+   --ease-out-expo  settles fast then glides  (entrances)
+   --ease-standard  symmetrical               (hover, small states)
+   --------------------------------------------------------------- */
+:root {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes viewFadeUp {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+.viewTransition {
+  animation: viewFadeUp 520ms var(--ease-out-expo) both;
+}
+
+/* cards rise into view as you scroll */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 700ms var(--ease-out-expo),
+    transform 700ms var(--ease-out-expo);
+}
+
+.reveal[data-revealed="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* stagger neighbours so a row does not snap in as one block */
+.reveal:nth-child(3n + 2) { transition-delay: 70ms; }
+.reveal:nth-child(3n + 3) { transition-delay: 140ms; }
+
+/* imagery breathes on hover */
+.workCard img,
+.desktopCategoryCard img,
+.showcaseVideoCard video {
+  transition: transform 620ms var(--ease-out-expo);
+  will-change: transform;
+}
+
+.workCard:hover img,
+.desktopCategoryCard:hover img,
+.showcaseVideoCard:hover video {
+  transform: scale(1.04);
+}
+
+/* nav, links and buttons settle rather than snap */
+.desktopNav button,
+.mobileNav button,
+.backButton,
+.desktopSocials a,
+.desktopFooterMeta a,
+.mobileFooterColumns a {
+  transition:
+    opacity 300ms var(--ease-standard),
+    transform 300ms var(--ease-standard);
+}
+
+.desktopNav button:hover,
+.mobileNav button:hover,
+.backButton:hover,
+.desktopSocials a:hover,
+.desktopFooterMeta a:hover,
+.mobileFooterColumns a:hover {
+  opacity: 0.55;
+}
+
+.playButton,
+.desktopFooterNewsletter,
+.mobileFooterLead {
+  transition:
+    transform 300ms var(--ease-standard),
+    opacity 300ms var(--ease-standard);
+}
+
+.desktopFooterNewsletter:hover,
+.mobileFooterLead:hover {
+  transform: translateX(5px);
+}
+
+.playButton:hover {
+  transform: scale(1.09);
+}
+
+/* honour the system setting */
+@media (prefers-reduced-motion: reduce) {
+  .viewTransition {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .workCard img,
+  .desktopCategoryCard img,
+  .showcaseVideoCard video,
+  .desktopNav button,
+  .playButton,
+  .desktopFooterNewsletter,
+  .mobileFooterLead {
+    transition: none;
+  }
+
+  .workCard:hover img,
+  .desktopCategoryCard:hover img,
+  .showcaseVideoCard:hover video {
+    transform: none;
+  }
+}
+
+.navLink {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 300ms var(--ease-standard);
+}
+
+.navLink:hover {
+  opacity: 0.55;
+}
+
+.showcaseVideoLink {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.next
+node_modules
+.vercel
+.env*.local
+
+# --- added by GitHub backup (2026-05-24) ---
+node_modules/
+.next/
+out/
+dist/
+build/
+.cache/
+.turbo/
+.vercel/
+.DS_Store
+.env
+.env.*
+*.log
+
+# TypeScript incremental build cache
+*.tsbuildinfo
