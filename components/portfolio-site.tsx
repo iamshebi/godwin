@@ -55,43 +55,57 @@ type ShowcaseItem =
   | { kind: "image"; title: string; image: string; alt: string; page?: PageId }
   | { kind: "video"; title: string; src: string; poster: string; page?: PageId; landscape?: boolean };
 
-// One tile per category for the homepage: the first clip where the category is
-// video-led, otherwise its first photograph.
-const showcaseCategories: ShowcaseItem[] = CATEGORY_SLUGS.map((slug) => {
-  const media = CATEGORY_MEDIA[slug];
-  const label = CATEGORY_LABELS[slug];
+// Homepage running order, set by hand. Each entry names a category and which
+// of its clips to use, so EVENTS can appear twice without repeating a film.
+const SHOWCASE_ORDER: { source: CategorySlug | "bts"; clip: number }[] = [
+  { source: "brand", clip: 0 },
+  { source: "food", clip: 0 },
+  { source: "events", clip: 0 },
+  { source: "fashion-films", clip: 0 },
+  { source: "events", clip: 1 },
+  { source: "automotive", clip: 0 },
+  { source: "interior", clip: 0 },
+  { source: "bts", clip: 0 },
+];
+
+const showcase: ShowcaseItem[] = SHOWCASE_ORDER.map(({ source, clip }) => {
+  if (source === "bts") {
+    const bts = BTS_CLIPS[clip];
+
+    return {
+      kind: "video" as const,
+      title: "BEHIND THE SCENES",
+      src: bts.src,
+      poster: bts.poster,
+      landscape: bts.landscape,
+    };
+  }
+
+  const media = CATEGORY_MEDIA[source];
+  const label = CATEGORY_LABELS[source];
 
   if (media.videos.length > 0) {
-    const clip = media.videos[0];
+    const video = media.videos[Math.min(clip, media.videos.length - 1)];
 
     return {
       kind: "video" as const,
       title: label,
-      page: slug as PageId,
-      src: clip.src,
-      poster: clip.poster,
-      landscape: clip.landscape,
+      page: source as PageId,
+      src: video.src,
+      poster: video.poster,
+      landscape: video.landscape,
     };
   }
 
-  const shot = media.images[0];
+  const shot = media.images[Math.min(clip, media.images.length - 1)];
 
   return {
     kind: "image" as const,
     title: label,
-    page: slug as PageId,
+    page: source as PageId,
     image: shot.image,
     alt: shot.alt,
   };
-});
-
-// Interleave the category tiles with behind-the-scenes clips.
-const showcase: ShowcaseItem[] = showcaseCategories.flatMap((item, index) => {
-  const clip = BTS_CLIPS[index];
-
-  return index % 2 === 1 && clip
-    ? [item, { kind: "video" as const, title: clip.title, src: clip.src, poster: clip.poster, landscape: clip.landscape }]
-    : [item];
 });
 
 const pageContent: Record<CategorySlug, CategoryPage> = Object.fromEntries(
@@ -470,7 +484,7 @@ export function PortfolioSite({ page = "home" }: { page?: PageId }) {
                     item.landscape ? styles.videoCardLandscape : ""
                   } ${item.page ? styles.showcaseVideoLink : ""} ${patternClass}`}
                   data-reveal
-                  key={item.title}
+                  key={`${item.title}-${index}`}
                   onClick={() => item.page && openPage(item.page)}
                   onMouseEnter={() => !mobile && playFoodVideo(key)}
                   onMouseLeave={() => !mobile && pauseFoodVideo(key)}
@@ -510,7 +524,7 @@ export function PortfolioSite({ page = "home" }: { page?: PageId }) {
                 className={`${cardClass} ${styles.workCardButton} ${styles.reveal} ${patternClass}`}
                 data-reveal
                 href={item.page ? `/${item.page}` : "/"}
-                key={item.title}
+                key={`${item.title}-${index}`}
               >
                 <img alt={item.alt} src={item.image} />
                 <span>{item.title}</span>
