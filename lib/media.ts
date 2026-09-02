@@ -41,27 +41,27 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
   "brand": {
     "videos": [
       {
-        "title": "BRAND 01",
-        "src": "/brand/brand-01.mp4",
-        "poster": "/brand/brand-01-poster.jpg",
-        "landscape": false
-      },
-      {
         "title": "AW LEATHER JACKETS",
         "src": "/brand/brand-02.mp4",
         "poster": "/brand/brand-02-poster.jpg",
         "landscape": false
       },
       {
-        "title": "PARADIGM",
-        "src": "/brand/brand-03.mp4",
-        "poster": "/brand/brand-03-poster.jpg",
+        "title": "BRAND 02",
+        "src": "/brand/brand-06.mp4",
+        "poster": "/brand/brand-06-poster.jpg",
         "landscape": false
       },
       {
-        "title": "BRAND 04",
+        "title": "BRAND 03",
         "src": "/brand/brand-04.mp4",
         "poster": "/brand/brand-04-poster.jpg",
+        "landscape": false
+      },
+      {
+        "title": "PARADIGM",
+        "src": "/brand/brand-03.mp4",
+        "poster": "/brand/brand-03-poster.jpg",
         "landscape": false
       },
       {
@@ -72,8 +72,8 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
       },
       {
         "title": "DESERT",
-        "src": "/brand/brand-06.mp4",
-        "poster": "/brand/brand-06-poster.jpg",
+        "src": "/brand/brand-01.mp4",
+        "poster": "/brand/brand-01-poster.jpg",
         "landscape": false
       },
       {
@@ -115,20 +115,20 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
     "videos": [
       {
         "title": "GO KITE TRAVEL",
-        "src": "/events/events-01.mp4",
-        "poster": "/events/events-01-poster.jpg",
-        "landscape": false
+        "src": "/events/events-05.mp4",
+        "poster": "/events/events-05-poster.jpg",
+        "landscape": true
       },
       {
         "title": "ARAMEX",
-        "src": "/events/events-02.mp4",
-        "poster": "/events/events-02-poster.jpg",
+        "src": "/events/events-03.mp4",
+        "poster": "/events/events-03-poster.jpg",
         "landscape": true
       },
       {
         "title": "AWR",
-        "src": "/events/events-03.mp4",
-        "poster": "/events/events-03-poster.jpg",
+        "src": "/events/events-08.mp4",
+        "poster": "/events/events-08-poster.jpg",
         "landscape": true
       },
       {
@@ -139,15 +139,15 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
       },
       {
         "title": "DAVID RIBOTT",
-        "src": "/events/events-05.mp4",
-        "poster": "/events/events-05-poster.jpg",
-        "landscape": true
+        "src": "/events/events-01.mp4",
+        "poster": "/events/events-01-poster.jpg",
+        "landscape": false
       },
       {
         "title": "DGHR",
         "src": "/events/events-06.mp4",
         "poster": "/events/events-06-poster.jpg",
-        "landscape": false
+        "landscape": true
       },
       {
         "title": "DGHR II",
@@ -157,8 +157,8 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
       },
       {
         "title": "GIVENCHY",
-        "src": "/events/events-08.mp4",
-        "poster": "/events/events-08-poster.jpg",
+        "src": "/events/events-02.mp4",
+        "poster": "/events/events-02-poster.jpg",
         "landscape": true
       },
       {
@@ -201,7 +201,7 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
         "title": "TDEX",
         "src": "/events/events-15.mp4",
         "poster": "/events/events-15-poster.jpg",
-        "landscape": false
+        "landscape": true
       },
       {
         "title": "VISION DEVELOPMENTS",
@@ -491,7 +491,7 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
         "title": "IYYAPAN",
         "src": "/fashion-films/fashion-films-06.mp4",
         "poster": "/fashion-films/fashion-films-06-poster.jpg",
-        "landscape": false
+        "landscape": true
       },
       {
         "title": "FASHION FILM 07",
@@ -512,8 +512,8 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
     "videos": [
       {
         "title": "FOOD 01",
-        "src": "/food/food-01.mp4",
-        "poster": "/food/food-01-poster.jpg",
+        "src": "/food/food-05.mp4",
+        "poster": "/food/food-05-poster.jpg",
         "landscape": false
       },
       {
@@ -536,8 +536,8 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
       },
       {
         "title": "FOOD 05",
-        "src": "/food/food-05.mp4",
-        "poster": "/food/food-05-poster.jpg",
+        "src": "/food/food-01.mp4",
+        "poster": "/food/food-01-poster.jpg",
         "landscape": false
       },
       {
@@ -587,14 +587,14 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
     "videos": [
       {
         "title": "DMCC ALMAS TOWER",
-        "src": "/interior/interior-01.mp4",
-        "poster": "/interior/interior-01-poster.jpg",
+        "src": "/interior/interior-02.mp4",
+        "poster": "/interior/interior-02-poster.jpg",
         "landscape": true
       },
       {
         "title": "INTERIOR 02",
-        "src": "/interior/interior-02.mp4",
-        "poster": "/interior/interior-02-poster.jpg",
+        "src": "/interior/interior-01.mp4",
+        "poster": "/interior/interior-01-poster.jpg",
         "landscape": true
       }
     ],
@@ -605,12 +605,12 @@ export const CATEGORY_MEDIA: Record<CategorySlug, CategoryMedia> = {
     "images": [
       {
         "title": "PHOTO 01",
-        "image": "/photos/photo-01.jpg",
+        "image": "/photos/photo-02.jpg",
         "alt": "Photography by Inspire Media in Dubai"
       },
       {
         "title": "PHOTO 02",
-        "image": "/photos/photo-02.jpg",
+        "image": "/photos/photo-01.jpg",
         "alt": "Photography by Inspire Media in Dubai"
       },
       {
