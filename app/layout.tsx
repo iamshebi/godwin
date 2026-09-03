@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-video-preview": -1 },
   },
   category: "Photography",
+  verification: {
+    google: "Mmf66KXpRuQTUzL_ykOszroE2Y7LDEh_WMPLk4noU8k",
+  },
 };
 
 const structuredData = {
